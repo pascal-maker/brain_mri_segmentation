@@ -3,7 +3,12 @@
 This project focuses on the segmentation of brain MRI images using a modified U-Net architecture known as SA-UNet, which includes a Spatial Attention mechanism. The model is designed to accurately segment brain tissues, aiding in medical diagnosis and research.
 
 ## Dataset
-The dataset used in this project is the "LGG-MRI-Segmentation" dataset from Kaggle. It originates from The Cancer Imaging Archive (TCIA) and is part of The Cancer Genome Atlas (TCGA) lower-grade glioma collection. It features MRI images from 110 patients, specifically including fluid-attenuated inversion recovery (FLAIR) sequences and genomic cluster data. The accompanying data.csv file contains detailed information about tumor genomic clusters and patient data, providing valuable context for each image in the dataset.Each MRI image comes with a mask that highlights regions of tumor tissue. Access the dataset on Kaggle: [https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation?resource=download]
+- The dataset used in this project is the "LGG-MRI-Segmentation" dataset from Kaggle. 
+- It originates from The Cancer Imaging Archive (TCIA) and is part of The Cancer Genome Atlas (TCGA) lower-grade glioma collection. 
+- It features MRI images from 110 patients, specifically including fluid-attenuated inversion recovery (FLAIR) sequences and genomic cluster data. 
+- The accompanying data.csv file contains detailed information about tumor genomic clusters and patient data, providing valuable context for each image in the dataset.
+- Each MRI image comes with a mask that highlights regions of tumor tissue. 
+- To access and explore this dataset, please visit the [LGG-MRI-Segmentation dataset on Kaggle](https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation).
 
 ![Alt text](images/data.png)
 
@@ -45,14 +50,7 @@ The model is trained over 50 epochs using a batch size of 32, and the learning r
 ### Usage
 To use this project:
 - Clone the repository.
-- Install the required dependencies.
-- TensorFlow: Version 2.x
-- NumPy: Version 1.19.x or later.
-- Pandas: Version 1.1.x or later.
-- OpenCV (cv2): Version 4.1.x or later.
-- Matplotlib: Version 3.2.x or later.
-- Seaborn: Version 0.11.x or later.
-- Scikit-learn: Version 0.24.x or later.
+- Install the required dependencies listed in requirements.txt
 - Run the Jupyter Notebook to train the model or use the pre-trained model for segmentation.
 Note: The number of epochs and hyperparameters can be adjusted as per use.
 
@@ -65,8 +63,7 @@ The model demonstrates high accuracy in segmenting brain MRI images. The binary 
 
 ## Citation and Contributions:
 
-This project implements the Spatial Attention U-Net (SA-UNet) model, initially introduced in [SA-UNet: Spatial Attention U-Net for Retinal Vessel Segmentation] by [Changlu Guo, Márton Szemenyei, Yugen Yi, Wenle Wang, Buer Chen, Changqi Fan]. The original paper can be accessed [https://arxiv.org/abs/2004.03696]. My work diverges from the original research in its application to the LGG MRI dataset for brain MRI segmentation, a novel use case not covered in the paper. While I utilize the foundational architecture of SA-UNet, my contribution lies in adapting the model to this specific dataset and analyzing its performance in this new context. The differences in my results highlight the model's adaptability and effectiveness in various medical imaging applications.
-Contributions to the project are welcome.
+This project implements the Spatial Attention U-Net (SA-UNet) model, originally introduced in the paper ["SA-UNet: Spatial Attention U-Net for Retinal Vessel Segmentation"](https://arxiv.org/abs/2004.03696) by Changlu Guo, Márton Szemenyei, Yugen Yi, Wenle Wang, Buer Chen, Changqi Fan. Unlike the original research, this project applies the SA-UNet architecture to the LGG MRI dataset for brain MRI segmentation, exploring its capabilities in a new application area. The primary contribution of this work lies in adapting and assessing the SA-UNet model within this novel context, highlighting the model's flexibility and potential in various medical imaging scenarios. Contributions to the project are welcome. Feel free to fork, submit pull requests, or open issues for discussion.
 
 ## License
 This project is licensed under the MIT License.
