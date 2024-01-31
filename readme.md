@@ -11,6 +11,7 @@ This project focuses on the segmentation of brain MRI images using a modified U-
 - To access and explore this dataset, please visit the [LGG-MRI-Segmentation dataset on Kaggle](https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation).
 
 ![](images/data.png)
+![](images/data1.png)
 
 ## Model Architecture
 The SA-UNet model combines the standard U-Net architecture with a spatial attention module to enhance feature extraction and segmentation accuracy.
@@ -44,8 +45,8 @@ The dataset is divided into three distinct sets: training (85%), validation (10%
 ### Training and Evaluation
 The model is trained over 50 epochs using a batch size of 32, and the learning rate is set to 1e-4.  The SA-UNet model, shaped to process 256x256 pixel images, is optimized using the Adam optimizer. The model's performance is measured using binary accuracy, Intersection over Union (IoU), and Dice coefficient, with Dice coefficient loss as the primary loss function. A ModelCheckpoint callback is utilized to save the best model iteration during training, ensuring the retention of the most effective version of the model.
 
-![Alt text](images/loss_graph.png)
-![Alt text](images/accuracy_graph.png)
+![](images/loss_graph.png)
+![](images/accuracy_graph.png)
 
 ### Usage
 To use this project:
@@ -57,7 +58,7 @@ Note: The number of epochs and hyperparameters can be adjusted as per use.
 ## Results
 The model demonstrates high accuracy in segmenting brain MRI images. The binary accuracy obtained is 99.49%, a Dice Coefficient Loss of -0.9029 suggests a high overlap between the predicted and actual masks, IoU score of 0.82, Dice Coefficient of 0.9047.
 
-![](images/resluts7.png)
+![](images/results7.png)
 ![](images/results4.png)
 ![](images/results5.png)
 
